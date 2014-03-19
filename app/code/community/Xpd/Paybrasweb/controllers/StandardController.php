@@ -39,10 +39,10 @@ class Xpd_Paybrasweb_StandardController extends Mage_Core_Controller_Front_Actio
         $session->unsUrlRedirect();
         
         if($paybras->getEnvironment() == '1') {
-            $url = 'https://service.paybras.com/payment/checkoutWeb';
+            $url = 'https://service.embrapag.com/payment/checkoutWeb';
         }
         else {
-            $url = 'https://sandbox.paybras.com/payment/checkoutWeb';
+            $url = 'https://sandbox.embrapag.com/payment/checkoutWeb';
         }
         
         $orderId = $order->getId();
@@ -107,10 +107,10 @@ class Xpd_Paybrasweb_StandardController extends Mage_Core_Controller_Front_Actio
         }
         
         if($paybras->getEnvironment() == '1') {
-            $url = 'https://service.paybras.com/payment/checkoutWeb';
+            $url = 'https://service.embrapag.com/payment/checkoutWeb';
         }
         else {
-            $url = 'https://sandbox.paybras.com/payment/checkoutWeb';
+            $url = 'https://sandbox.embrapag.com/payment/checkoutWeb';
         }
         
         if(strlen((string)$orderId)<9) {
@@ -227,10 +227,10 @@ class Xpd_Paybrasweb_StandardController extends Mage_Core_Controller_Front_Actio
 				$paybras->log($order->getId());
 				
                 if($paybras->getEnvironment() == '1') {
-                    $url = 'https://service.paybras.com/payment/getStatus';
+                    $url = 'https://service.embrapag.com/payment/getStatus';
                 }
                 else {
-                    $url = 'https://sandbox.paybras.com/payment/getStatus';
+                    $url = 'https://sandbox.embrapag.com/payment/getStatus';
                 }
                 
                 $fields = array(
